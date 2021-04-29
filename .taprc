@@ -1,0 +1,19 @@
+ts: false
+jsx: false
+check-coverage: true
+output-file: .tap
+coverage-report:
+- text
+- text-summary
+- json
+- json-summary
+- html
+branches: 98
+lines: 98
+functions: 92
+statements: 98
+nyc-arg:
+- --all
+- --exclude=tools/
+- --exclude=test/
+- --exclude=coverage/
