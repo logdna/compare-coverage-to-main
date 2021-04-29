@@ -1,0 +1,69 @@
+{
+  "name": "compare-coverage-to-main",
+  "description": "Compares the current json coverage file to that of the latest release",
+  "version": "0.0.0",
+  "main": "index.js",
+  "bin": {
+    "compare-coverage-to-main": "bin/cmd.js"
+  },
+  "files": [
+    "bin/*",
+    "lib/**/*",
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "tap": "tap",
+    "lint": "eslint ./",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "tap",
+    "test:ci": "tools/test-ci.sh",
+    "pretest": "npm run lint",
+    "pretest:ci": "npm run lint",
+    "release": "semantic-release"
+  },
+  "author": "Evan Lucas <evanlucas@me.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://github.com/logdna/compare-coverage-to-main"
+  },
+  "homepage": "https://github.com/logdna/compare-coverage-to-main",
+  "bugs": {
+    "url": "https://github.com/logdna/compare-coverage-to-main/issues"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "eslintConfig": {
+    "root": true,
+    "ignorePatterns": [
+      "node_modules/",
+      "coverage/"
+    ],
+    "extends": "logdna",
+    "parserOptions": {
+      "ecmaVersion": 2019
+    }
+  },
+  "devDependencies": {
+    "eslint": "^7.24.0",
+    "eslint-config-logdna": "^5.0.0",
+    "semantic-release": "^17.4.2",
+    "semantic-release-config-logdna": "^1.3.0",
+    "tap": "^15.0.2",
+    "tap-parser": "^10.1.0",
+    "tap-xunit": "^2.4.1"
+  },
+  "dependencies": {
+    "@octokit/rest": "^18.5.2",
+    "help": "^3.0.2",
+    "nopt": "^5.0.0"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "extends": [
+      "semantic-release-config-logdna"
+    ]
+  }
+}
