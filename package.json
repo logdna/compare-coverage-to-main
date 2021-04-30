@@ -1,7 +1,7 @@
 {
   "name": "compare-coverage-to-main",
   "description": "Compares the current json coverage file to that of the latest release",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "bin": {
     "compare-coverage-to-main": "bin/cmd.js"
