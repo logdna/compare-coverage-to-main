@@ -142,7 +142,7 @@ module.exports = class Comparer {
       }
     })
 
-    const latest = JSON.parse(asset.data)
+    const latest = JSON.parse(Buffer.from(asset.data))
     return parseCoverage(latest)
   }
 
